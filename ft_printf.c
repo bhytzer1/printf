@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davide <davide@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dmandric <dmandric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 23:18:32 by davide            #+#    #+#             */
-/*   Updated: 2026/01/13 04:32:39 by davide           ###   ########.fr       */
+/*   Updated: 2026/01/16 17:40:15 by dmandric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h";
+#include "ft_printf.h"
 
 int ft_printf(const char *str, ...)
 {
@@ -36,4 +36,24 @@ int ft_printf(const char *str, ...)
 	}
 	va_end(args);
 	return (lenght);
+}
+
+int	ft_formats(va_list args, const char format)
+{
+	int	len;
+
+	len = 0;
+	if(format == 'c')
+		len += ft_print_char(va_arg(args, int));
+	else if (format == 's')
+		len += ft_print_str(va_arg(args, char *));
+	else if (format == '%')
+		len += write(1, "%", 1);
+	else if (format == 'd' || format == 'i')
+		len += ft_print_nbr(va_arg(args, int));
+	else if (format == 'u')
+		len += ft_print_unsigned(va_arg(args, unsigned int));
+	else if (format == '%')
+		len += ft_print_percent();
+	return(len);
 }
