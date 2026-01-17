@@ -6,7 +6,7 @@
 /*   By: dmandric <dmandric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 06:01:05 by davide            #+#    #+#             */
-/*   Updated: 2026/01/16 21:08:59 by dmandric         ###   ########.fr       */
+/*   Updated: 2026/01/17 20:34:39 by dmandric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ unsigned int	ft_print_unsigned(unsigned int n);
 int				ft_print_char(char c);
 int				ft_print_str(char *s);
 int				ft_print_percent(void);
-static int      ft_put_ptr_val(unsigned long long ptr);
-int             ft_print_hex(unsigned int n, const char format);
-
+int				ft_print_hex(unsigned int n, const char format);
+int				ft_print_ptr(unsigned long long ptr);
 
 #endif

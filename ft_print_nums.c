@@ -6,17 +6,17 @@
 /*   By: dmandric <dmandric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 19:11:12 by dmandric          #+#    #+#             */
-/*   Updated: 2026/01/16 20:12:23 by dmandric         ###   ########.fr       */
+/*   Updated: 2026/01/17 20:44:14 by dmandric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_print_nbr(int n)
+int	ft_print_nbr(int n)
 {
-	int len;
-	long nb;
-	char c;
+	int		len;
+	long	nb;
+	char	c;
 
 	len = 0;
 	nb = n;
@@ -32,10 +32,10 @@ int ft_print_nbr(int n)
 	return (len);
 }
 
-unsigned int ft_print_unsigned(unsigned int n)
+unsigned int	ft_print_unsigned(unsigned int n)
 {
-	int	len;
-	char c;
+	int		len;
+	char	c;
 
 	len = 0;
 	if (n >= 10)
