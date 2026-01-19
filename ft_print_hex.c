@@ -6,11 +6,11 @@
 /*   By: dmandric <dmandric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 09:52:28 by dmandric          #+#    #+#             */
-/*   Updated: 2026/01/17 20:45:02 by dmandric         ###   ########.fr       */
+/*   Updated: 2026/01/19 15:16:59 by dmandric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 #include <unistd.h>
 
 int	ft_print_hex(unsigned int n, const char format)
@@ -36,7 +36,7 @@ static int	ft_put_ptr_val(unsigned long n)
 
 	len = 0;
 	base = "0123456789abcdef";
-	if (n > 16)
+	if (n >= 16)
 		len += ft_put_ptr_val(n / 16);
 	len += write(1, &base[n % 16], 1);
 	return (len);

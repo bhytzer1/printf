@@ -6,11 +6,11 @@
 /*   By: dmandric <dmandric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 04:50:58 by davide            #+#    #+#             */
-/*   Updated: 2026/01/17 20:38:24 by dmandric         ###   ########.fr       */
+/*   Updated: 2026/01/19 15:18:55 by dmandric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 #include <unistd.h>
 
 int	ft_print_char(char c)
@@ -26,8 +26,8 @@ int	ft_print_str(char *str)
 	i = 0;
 	if (!str)
 	{
-		write (1, "null", 4);
-		return (4);
+		write (1, "(null)", 6);
+		return (6);
 	}
 	while (str[i])
 	{

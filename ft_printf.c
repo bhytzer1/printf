@@ -6,7 +6,7 @@
 /*   By: dmandric <dmandric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 23:18:32 by davide            #+#    #+#             */
-/*   Updated: 2026/01/17 20:43:16 by dmandric         ###   ########.fr       */
+/*   Updated: 2026/01/19 15:16:39 by dmandric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,6 @@ int	ft_formats(va_list args, const char format)
 		len += ft_print_char(va_arg(args, int));
 	else if (format == 's')
 		len += ft_print_str(va_arg(args, char *));
-	else if (format == '%')
-		len += write(1, "%", 1);
 	else if (format == 'd' || format == 'i')
 		len += ft_print_nbr(va_arg(args, int));
 	else if (format == 'u')

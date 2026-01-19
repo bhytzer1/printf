@@ -6,7 +6,7 @@
 #    By: dmandric <dmandric@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/16 16:22:22 by dmandric          #+#    #+#              #
-#    Updated: 2026/01/17 18:18:31 by dmandric         ###   ########.fr        #
+#    Updated: 2026/01/19 15:21:56 by dmandric         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,8 @@ NAME = libftprintf.a
 # 2. Compilatore e Flag
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+
+HEADER = ft_printf.h
 
 # 3. Lista dei tuoi file .c (AGGIUNGI QUI SE NE CREI ALTRI)
 SRCS = ft_printf.c ft_print_text.c ft_print_nums.c ft_print_hex.c
@@ -31,7 +33,7 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 # 7. Come compilare ogni singolo file .c in .o
-%.o: %.c
+%.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # 8. Pulizia dei file temporanei (.o)
