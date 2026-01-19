@@ -6,7 +6,7 @@
 /*   By: dmandric <dmandric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 06:01:05 by davide            #+#    #+#             */
-/*   Updated: 2026/01/17 20:34:39 by dmandric         ###   ########.fr       */
+/*   Updated: 2026/01/19 15:28:19 by dmandric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdio.h>
-# include "libft/libft.h"
 
 int				ft_printf(const char *format, ...);
 int				ft_formats(va_list args, const char format);
