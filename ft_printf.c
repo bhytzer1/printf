@@ -6,7 +6,7 @@
 /*   By: dmandric <dmandric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 23:18:32 by davide            #+#    #+#             */
-/*   Updated: 2026/01/19 15:16:39 by dmandric         ###   ########.fr       */
+/*   Updated: 2026/01/22 19:26:17 by dmandric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_printf(const char *str, ...)
 	int		i;
 	int		lenght;
 
+	if (!str)
+		return (-1);
 	i = 0;
 	lenght = 0;
 	va_start(args, str);
@@ -57,5 +59,11 @@ int	ft_formats(va_list args, const char format)
 		len += ft_print_hex(va_arg(args, unsigned int), format);
 	else if (format == 'p')
 		len += ft_print_ptr(va_arg(args, unsigned long long));
+	else
+{
+	len += write(1, "%", 1);
+	len += write(1, &format, 1);
+}
+return (len);
 	return (len);
 }
